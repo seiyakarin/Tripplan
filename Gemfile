@@ -31,6 +31,7 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
@@ -43,7 +44,6 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
- 
 end
 
 group :development do
@@ -59,8 +59,6 @@ end
 
 gem 'devise'
 
-gem 'dotenv-rails'
-
 gem 'cloudinary'
 gem 'activestorage-cloudinary-service'
 
@@ -68,5 +66,6 @@ gem 'sass-rails'
 
 # PostgreSQL → 本番用
 group :production do
+  gem 'dotenv-rails'
   gem 'pg'
 end
