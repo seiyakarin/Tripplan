@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  namae: MyString
+  shozaichi: MyString
+  taizaijikan: MyString
+  eigyojikan: 1
+  idoujikan: MyString
+  ryokin: MyString
+  gaiyo: MyText
+
+two:
+  namae: MyString
+  shozaichi: MyString
+  taizaijikan: MyString
+  eigyojikan: 1
+  idoujikan: MyString
+  ryokin: MyString
+  gaiyo: MyText

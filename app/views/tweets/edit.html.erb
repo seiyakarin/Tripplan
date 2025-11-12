@@ -1,0 +1,45 @@
+<%= form_for @tweet do |f| %>
+  
+     <div class="field">
+    <%= f.label :名前 %>
+    <%= f.text_field :namae, :size => 30 %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :所在地 %>
+    <%= f.text_field :shozaichi, :size => 30 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :滞在時間 %>
+    <%= f.text_field :taizaijikan, :size => 30 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :営業時間  %>
+    <%= f.number_field :eigyojikan, :size => 10 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :移動時間 %>
+    <%= f.text_field :idoujikan, :size => 30 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :料金 %>
+    <%= f.text_field :ryokin, :size => 30 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :概要  %>
+    <%= f.text_area :gaiyo, :size => "30x2" %>
+  </div>
+
+ <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+
+  <%= f.submit "編集する" %>
+<% end %>

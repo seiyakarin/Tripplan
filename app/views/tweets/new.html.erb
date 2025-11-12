@@ -1,0 +1,79 @@
+<h1>(TripPlan)</h1>
+<h3>新規投稿ページ</h3>
+<%= form_for @tweet do |f| %>
+
+
+  <div class="field">
+    <%= f.label :名前 %>
+    <%= f.text_field :namae, :size => 30 %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :所在地 %>
+    <%= f.select :shozaichi, 
+    [["あわら市", "あわら市"], 
+    ["池田町", "池田町"], 
+    ["永平寺町", "永平寺町"], 
+    ["越前市", "越前市"], 
+    ["越前町", "越前町"], 
+    ["おおい町", "おおい町"], 
+    ["大野市", "大野市"], 
+    ["小浜市", "小浜市"], 
+    ["勝山市", "勝山市"], 
+    ["坂井市", "坂井市"], 
+    ["鯖江市", "鯖江市"], 
+    ["高浜町", "高浜町"], 
+    ["敦賀市", "敦賀市"], 
+    ["福井市", "福井市"], 
+    ["南越前町", "南越前町"], 
+    ["美浜町", "美浜町"], 
+    ["若狭町", "若狭町"]], include_blank: "選択して下さい" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :滞在時間 %>
+    <%= f.text_field :taizaijikan, :size => 30 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :営業時間  %>
+    <%= f.text_field :eigyojikan, :size => 30 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :移動時間 %>
+    <%= f.text_field :idoujikan, :size => 30 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :料金 %>
+    <%= f.text_field :ryokin, :size => 30 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :概要  %>
+    <%= f.text_area :gaiyo, :size => "30x2" %>
+  </div>
+
+ <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+
+ <div class='form-group'>
+        <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |tag| %>
+ <div class='form-check'>
+    <%= tag.label class: 'form-check-label' do %>
+    <%= tag.check_box class: 'form-check-input' %>
+    <%= tag.text %>
+    <% end %>
+  </div>
+    <% end %>
+  </div>
+
+
+  <%= f.submit "登録する" %>
+<% end %>
+
+<%= link_to "一覧に戻る", tweets_path %>
