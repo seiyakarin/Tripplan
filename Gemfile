@@ -66,6 +66,5 @@ gem 'sass-rails'
 
 # PostgreSQL → 本番用
 group :production do
-  gem 'dotenv-rails'
   gem 'pg'
 end
